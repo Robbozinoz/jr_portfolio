@@ -215,6 +215,12 @@ main {
       color: #000; }
       .boxes div:hover span {
         color: #000; }
+      .boxes div:hover i {
+        -webkit-transition: -webkit-transform .8s ease-in-out;
+        transition: transform .8s ease-in-out; }
+      .boxes div:hover i {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); }
 
 .btn, .btn-dark, .btn-light {
   display: block;

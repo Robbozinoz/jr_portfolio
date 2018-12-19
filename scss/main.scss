@@ -159,6 +159,16 @@ main {
       span {
         color: set-text-color($secondary-color);
       }
+
+      i {
+        -webkit-transition: -webkit-transform .8s ease-in-out;
+        transition: transform .8s ease-in-out;
+      }
+
+      i {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
     }
   }
 }
