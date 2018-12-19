@@ -205,11 +205,11 @@ main {
   .boxes div {
     font-size: 1.5rem;
     border: 3px #000 solid;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     transition: all 0.5s ease-out; }
     .boxes div:hover {
-      padding: 0.5rem 1.5rem;
+      padding: 1.0rem 1.5rem;
       background: #d8b91f;
       border: 3px #4c61a5 solid;
       color: #000; }

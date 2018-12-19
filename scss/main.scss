@@ -145,13 +145,13 @@ main {
   div {
     font-size: 1.5rem;
     border: 3px #000 solid;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
 
     @include ease-out;
 
     &:hover {
-      padding: 0.5rem 1.5rem;
+      padding: 1.0rem 1.5rem;
       background: $tertiary-color;
       border: 3px $secondary-color solid;
       color: set-text-color($secondary-color);
