@@ -69,10 +69,10 @@
   .menu .nav-link {
     display: inline-block;
     position: relative;
-    font-size: 30px;
+    font-size: 2rem;
     text-transform: uppercase;
     padding: 1rem 0;
-    font-weight: 300;
+    font-weight: 400;
     color: #000;
     text-decoration: none;
     transition: all 0.5s ease-out; }
@@ -200,11 +200,12 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  overflow: auto; }
   .boxes div {
-    font-size: 2rem;
+    font-size: 1.5rem;
     border: 3px #000 solid;
-    padding: 1.5rem 3.5rem;
+    padding: 1.5rem 2rem;
     margin-bottom: 3rem;
     transition: all 0.5s ease-out; }
     .boxes div:hover {
@@ -288,6 +289,10 @@ main {
   main h1.lg-heading {
     font-size: 3.5rem; }
   main h2.sm-heading {
-    font-size: 1.4rem; }
+    font-size: 2rem; }
   .projects {
-    grid-template-columns: repeat(1, 1fr); } }
+    grid-template-columns: repeat(1, 1fr); }
+  .boxes div {
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 0.5rem; } }

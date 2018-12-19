@@ -114,10 +114,10 @@
   .nav-link {
     display: inline-block;
     position: relative;
-    font-size: 30px;
+    font-size: 2rem;
     text-transform: uppercase;
     padding: 1rem 0;
-    font-weight: 300;
+    font-weight: 400;
     color: set-text-color($primary-color);
     text-decoration: none;
     @include ease-out;
@@ -128,7 +128,7 @@
   }
 }
 
-//Delay each nav item slide bu 0.1s
+//Delay each nav item slide by 0.1s
 @for $x from 1 through 4 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;
