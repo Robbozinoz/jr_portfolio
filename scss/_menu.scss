@@ -46,6 +46,7 @@
   width: 100%;
   opacity: 1;
   visibility: hidden;
+  
 
   &.show {
     visibility: visible;
@@ -79,7 +80,8 @@
 
   //BRanding
   &-branding {
-    background: $primary-color;
+    /*background: $primary-color;*/
+    background: url("../img/background-gear.png");
     @include ease-out;
     transform: translate3d(0, 100%, 0);
 
@@ -90,6 +92,7 @@
 
     .portrait {
       width: 250px;
+      opacity: 0;
       height: 250px;
       background: url("../img/jr_bgdlg.png");
       border-radius: 50%;
@@ -115,7 +118,7 @@
     display: inline-block;
     position: relative;
     font-size: 2rem;
-    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
     padding: 1rem 0;
     font-weight: 400;
     color: set-text-color($primary-color);

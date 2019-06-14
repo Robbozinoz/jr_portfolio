@@ -11,7 +11,7 @@ body {
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.5;
 }
 
@@ -21,9 +21,10 @@ h2,
 h3 {
   margin: 0;
   font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
 
   &.lg-heading {
-    font-size: 6rem;
+    font-size: 4rem;
   }
 
   &.sm-heading {
@@ -80,7 +81,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 2rem;
-  grid-template-areas: "bio-image bio bio""job1 job2 job3";
+  grid-template-areas: "bio-image bio bio""job1 job2 job3""job4 job5 job6";
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
@@ -92,7 +93,7 @@ main {
 
   .bio {
     grid-area: bio;
-    font-size: 1.5rem;
+    font-size: 1.15rem;
   }
 
   .job-1 {
@@ -105,6 +106,18 @@ main {
 
   .job-3 {
     grid-area: job3;
+  }
+  
+  .job-4 {
+    grid-area: job4;
+  }
+
+  .job-5 {
+    grid-area: job5;
+  }
+
+  .job-6 {
+    grid-area: job6;
   }
 
   .job {
@@ -201,9 +214,22 @@ main {
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: darken($primary-color, 10);
+  /*Replace with gears image background: darken($primary-color, 10);*/
+  background: url(../img/background-gear_footer.png);
   color: set-text-color($primary-color);
-  height: 60px;
+  /*height: 60px;*/
+
+  .footer-icons {
+
+    float: right;
+    a {
+      margin-left: 1.5rem;
+      &:hover {
+        color: $tertiary-color;
+        @include ease-out();
+      }
+    }
+  }
 }
 
 @import "mobile";
