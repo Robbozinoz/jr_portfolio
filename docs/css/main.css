@@ -267,6 +267,11 @@ main {
         color: #FFD259;
         transition: all 0.5s ease-out; }
 
+/*Typewriter effect*/
+/* Cursor */
+.txt-type > .txt {
+  border-right: 0.2rem solid #777; }
+
 @media screen and (min-width: 1171px) {
   .projects {
     grid-template-columns: repeat(4, 1fr); } }

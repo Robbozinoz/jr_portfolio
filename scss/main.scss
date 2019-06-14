@@ -234,4 +234,10 @@ main {
   }
 }
 
+/*Typewriter effect*/
+/* Cursor */
+.txt-type > .txt {
+  border-right: 0.2rem solid #777;
+}
+
 @import "mobile";
