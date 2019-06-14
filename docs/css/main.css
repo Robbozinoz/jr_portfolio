@@ -107,7 +107,7 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/background-gear.png);
+    background: url(../img/background-gear.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -256,7 +256,7 @@ main {
   text-align: center;
   padding: 1rem;
   /*Replace with gears image background: darken($primary-color, 10);*/
-  background: url(../img/background-gear_footer.png);
+  background: url(../img/background-gear_footer.jpg);
   color: #000;
   /*height: 60px;*/ }
   #main-footer .footer-icons {
@@ -332,6 +332,6 @@ main {
     width: 100%;
     margin-bottom: 0.5rem; }
   .menu-branding {
-    background: url("../img/background-gear_footer.png") no-repeat; }
+    background: url("../img/background-gear_footer.jpg") no-repeat; }
   .footer-icons {
     float: none; } }
