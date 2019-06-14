@@ -108,7 +108,7 @@ main {
   .job-3 {
     grid-area: job3;
   }
-  
+
   .job-4 {
     grid-area: job4;
   }
@@ -222,8 +222,10 @@ main {
 
   .footer-icons {
     float: right;
+
     a {
       margin-left: 1.5rem;
+
       &:hover {
         color: $tertiary-color;
         @include ease-out();
