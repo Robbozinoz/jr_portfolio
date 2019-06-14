@@ -133,6 +133,7 @@ h3 {
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
+    font-family: 'Ubuntu', sans-serif;
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(255, 255, 255, 0.5); }
