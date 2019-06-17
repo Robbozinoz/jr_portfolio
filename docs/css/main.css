@@ -217,9 +217,9 @@ main {
   overflow: auto; }
   .boxes div {
     font-size: 1.5rem;
-    border: 3px #000 solid;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
+    border: 2.5px #000 solid;
+    padding: 1.5rem 2.0rem;
+    margin-bottom: 2rem;
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 1.0rem 1.5rem;
@@ -271,6 +271,17 @@ main {
 /* Cursor */
 .txt-type > .txt {
   border-right: 0.2rem solid #777; }
+
+/*Contact page image control*/
+.contact-image {
+  grid-area: bio-image;
+  margin: auto;
+  border-radius: 50%;
+  border: #597fff 3px solid; }
+
+.contact-box div {
+  border: none;
+  margin-bottom: 0; }
 
 @media screen and (min-width: 1171px) {
   .projects {

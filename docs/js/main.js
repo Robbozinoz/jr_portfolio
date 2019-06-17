@@ -11,79 +11,79 @@ let showMenu = false;
 menuBtn.addEventListener('click', toggleMenu);
 
 function toggleMenu() {
-    if (!showMenu) {
-        menuBtn.classList.add('close');
-        menu.classList.add('show');
-        menuNav.classList.add('show');
-        menuBranding.classList.add('show');
-        navItems.forEach(item => item.classList.add('show'));
+  if (!showMenu) {
+    menuBtn.classList.add('close');
+    menu.classList.add('show');
+    menuNav.classList.add('show');
+    menuBranding.classList.add('show');
+    navItems.forEach(item => item.classList.add('show'));
 
-        //Set menu burger bar to true
-        showMenu = true;
-    } else {
-        menuBtn.classList.remove('close');
-        menu.classList.remove('show');
-        menuNav.classList.remove('show');
-        menuBranding.classList.remove('show');
-        navItems.forEach(item => item.classList.remove('show'));
+    //Set menu burger bar to true
+    showMenu = true;
+  } else {
+    menuBtn.classList.remove('close');
+    menu.classList.remove('show');
+    menuNav.classList.remove('show');
+    menuBranding.classList.remove('show');
+    navItems.forEach(item => item.classList.remove('show'));
 
-        //Set menu burger bar to true
-        showMenu = false;
-    }
+    //Set menu burger bar to true
+    showMenu = false;
+  }
 }
 
 
-const TypeWriter = function(txtElement, words, wait = 3000) {
-   this.txtElement = txtElement;
-   this.words = words;
-   this.txt = '';
-   this.wordIndex = 0;
-   this.wait = parseInt(wait, 10);
-   this.type();
-   this.isDeleting = false;
- }
+const TypeWriter = function (txtElement, words, wait = 3000) {
+  this.txtElement = txtElement;
+  this.words = words;
+  this.txt = '';
+  this.wordIndex = 0;
+  this.wait = parseInt(wait, 10);
+  this.type();
+  this.isDeleting = false;
+}
 
 // Type Method
- TypeWriter.prototype.type = function() {
-   // Current index of word
-   const current = this.wordIndex % this.words.length;
-   // Get full text of current word
-   const fullTxt = this.words[current];
+TypeWriter.prototype.type = function () {
+  // Current index of word
+  const current = this.wordIndex % this.words.length;
+  // Get full text of current word
+  const fullTxt = this.words[current];
 
-   // Check if deleting
-   if(this.isDeleting) {
-     // Remove char
-     this.txt = fullTxt.substring(0, this.txt.length - 1);
-   } else {
-     // Add char
-     this.txt = fullTxt.substring(0, this.txt.length + 1);
-   }
+  // Check if deleting
+  if (this.isDeleting) {
+    // Remove char
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    // Add char
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
 
-   // Insert txt into element
-   this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+  // Insert txt into element
+  this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
-   // Initial Type Speed
-   let typeSpeed = 300;
+  // Initial Type Speed
+  let typeSpeed = 100;
 
-   if(this.isDeleting) {
-     typeSpeed /= 2;
-   }
+  if (this.isDeleting) {
+    typeSpeed /= 2;
+  }
 
-   // If word is complete
-   if(!this.isDeleting && this.txt === fullTxt) {
-     // Make pause at end
-     typeSpeed = this.wait;
-     // Set delete to true
-     this.isDeleting = true;
-   } else if(this.isDeleting && this.txt === '') {
-     this.isDeleting = false;
-     // Move to next word
-     this.wordIndex++;
-     // Pause before start typing
-     typeSpeed = 500;
-   }
+  // If word is complete
+  if (!this.isDeleting && this.txt === fullTxt) {
+    // Make pause at end
+    typeSpeed = this.wait;
+    // Set delete to true
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    // Move to next word
+    this.wordIndex++;
+    // Pause before start typing
+    typeSpeed = 80;
+  }
 
-setTimeout(() => this.type(), typeSpeed);
+  setTimeout(() => this.type(), typeSpeed);
 }
 
 // Init On DOM Load
