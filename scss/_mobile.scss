@@ -29,7 +29,7 @@
     float: none;
     width: 100%;
     min-height: 0;
- 
+
 
     &.show {
       transform: translate3d(0, 0, 0);
@@ -44,12 +44,16 @@
     .nav-item {
       font-size: 1.5rem;
     }
+
+    .nav-link {
+      padding: 0.3rem 0;
+    }
   }
 
   .menu-branding {
     height: 28vh;
     transform: translate3d(100%, 0, 0);
-    background: url("../img/background-gear.png") no-repeat;
+    background: url("../img/background-gear.jpg") no-repeat;
 
     .portrait {
       background: url("../img/jr_bdgsm.png");
