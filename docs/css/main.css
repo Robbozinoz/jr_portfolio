@@ -311,18 +311,16 @@ main {
   background: #f2f5ff;
   margin-bottom: 2rem;
   border-bottom: #FFD259 2px solid; }
-
-.card h3 {
-  margin-bottom: 2rem; }
-
-.card img {
-  height: 100%;
-  width: 100%; }
-  .card img:hover {
-    opacity: 0.5;
-    /*border-color: $secondary-color;*/
-    border: 3px #597fff solid;
-    transition: all 0.5s ease-out; }
+  .card h3 {
+    margin-bottom: 2rem; }
+  .card img {
+    height: 100%;
+    width: 100%; }
+    .card img:hover {
+      opacity: 0.5;
+      /*border-color: $secondary-color;*/
+      border: 3px #597fff solid;
+      transition: all 0.5s ease-out; }
 
 .card > div {
   padding: 2rem; }

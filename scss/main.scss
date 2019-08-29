@@ -288,13 +288,10 @@ main {
   background: lighten($secondary-color, 30);
   margin-bottom: 2rem;
   border-bottom: #FFD259 2px solid;
-}
 
-.card h3 {
-  margin-bottom: 2rem;
-}
-
-.card {
+  h3 {
+    margin-bottom: 2rem;
+  }
 
   img {
     height: 100%;
