@@ -1,0 +1,34 @@
+@media only screen and (min-device-width: 768px) {
+  .form-container {
+    padding: 5%;
+    background: #ffffff;
+    border: 2px solid #FFD259;
+    max-width: 32.5rem;
+    margin: auto;
+  }
+
+}
+
+.container-form {
+  max-width: 90vh;
+  margin: auto;
+  margin-bottom: auto;
+  /*margin-bottom: 2rem;*/
+  overflow: auto;
+  padding: 0.5rem;
+  background: lighten(#597fff, 30);
+}
+
+label {
+  font-size: 1.33rem;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+}
+
+textarea {
+  height: 12.5rem;
+}
