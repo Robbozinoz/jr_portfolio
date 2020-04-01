@@ -6,7 +6,8 @@ $secondary-color: rgb(76, 97, 165);
 $secondary-color: #597fff;
 $tertiary-color: #FFD259;
 $show-home-image: true;
-$home-image: url(../img/background-gear.jpg);
+//$home-image: url(../img/background-gear.jpg);
+$home-image: url(../img/room/room_bkg.jpg);
 $background-opacity: 0.75;
 
 @mixin ease-out {

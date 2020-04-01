@@ -3,3 +3,4 @@ package.json
 *.psd
 /js/es6class.js
 /img/archive/
+/doc/form/handler.php

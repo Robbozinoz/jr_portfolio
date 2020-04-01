@@ -46,7 +46,7 @@
   width: 100%;
   opacity: 1;
   visibility: hidden;
-  
+
 
   &.show {
     visibility: visible;
@@ -78,10 +78,11 @@
     }
   }
 
-  //BRanding
+  //Branding
   &-branding {
     /*background: $primary-color;*/
-    background: url("../img/background-gear.jpg");
+    //background: url("../img/background-gear.jpg");
+    background: url("../img/room/room_sml_bkg.jpg");
     @include ease-out;
     transform: translate3d(0, 100%, 0);
 

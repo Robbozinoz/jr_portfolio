@@ -23,6 +23,6 @@ $pp->requireReCaptcha();
 $pp->getReCaptcha()->initSecretKey('6LfU77UUAAAAAOJucuvtCicypGEe8TbqB_2zlPQl');
 
 
-$pp->sendEmailTo('john@myjamjar.com.au'); // ← Your email here
+$pp->sendEmailTo('john@room5.net.au'); // ← Your email here
 
 echo $pp->process($_POST);

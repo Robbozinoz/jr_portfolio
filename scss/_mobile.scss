@@ -10,6 +10,10 @@
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .menu .nav-link {
+    font-size: 1.75rem;
+  }
 }
 
 //Tablets & small Laptops
@@ -47,13 +51,15 @@
 
     .nav-link {
       padding: 0.3rem 0;
+      font-size: 1.7rem;
     }
   }
 
   .menu-branding {
     height: 28vh;
     transform: translate3d(100%, 0, 0);
-    background: url("../img/background-gear.jpg") no-repeat;
+    //background: url("../img/background-gear.jpg") no-repeat;
+    background: url("../img/room/room_menu_3.jpg") no-repeat;
 
     .portrait {
       background: url("../img/jr_bdgsm.png");
@@ -88,6 +94,8 @@
     }*/
 
   main {
+    padding: 1.5rem;
+
     #home h1 {
       margin-top: 10vh;
     }
@@ -112,10 +120,15 @@
   }
 
   .menu-branding {
-    background: url("../img/background-gear_footer.jpg") no-repeat;
+    //background: url("../img/background-gear_footer.jpg") no-repeat;
+    background: url("../img/room/room_menu_6.jpg") no-repeat;
   }
 
   .footer-icons {
     float: none;
+  }
+
+  .menu .nav-link {
+    font-size: 1.75rem;
   }
 }
