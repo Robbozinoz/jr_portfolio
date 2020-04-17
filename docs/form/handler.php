@@ -20,7 +20,7 @@ $validator->field('Message')->maxLength(6000);
 
 
 $pp->requireReCaptcha();
-$pp->getReCaptcha()->initSecretKey('6LfU77UUAAAAAOJucuvtCicypGEe8TbqB_2zlPQl');
+$pp->getReCaptcha()->initSecretKey('XXXXX');
 
 
 $pp->sendEmailTo('john@room5.net.au'); // ← Your email here
