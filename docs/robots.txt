@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /form/src/
+Disallow: /form/vendor/
+Disallow: /fonts/
+
+
+Sitemap: https://www.room5.net.au/sitemap.xml

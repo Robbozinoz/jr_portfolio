@@ -96,6 +96,9 @@ $secondary-color: rgb(76, 97, 165);
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+.nav-item:nth-child(5) {
+  transition-delay: 0.5s; }
+
 @media only screen and (min-device-width: 768px) {
   .form-container {
     padding: 5%;
@@ -407,7 +410,7 @@ main {
   .menu-branding {
     height: 28vh;
     transform: translate3d(100%, 0, 0);
-    background: url("../img/room/room_menu_3.jpg") no-repeat; }
+    background: url("../img/room/room_menu_6.jpg") no-repeat; }
     .menu-branding .portrait {
       background: url("../img/jr_bdgsm.png");
       width: 150px;
