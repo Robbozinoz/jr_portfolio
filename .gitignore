@@ -1,0 +1,5 @@
+node_modules
+package.json
+*.psd
+/js/es6class.js
+/img/archive/

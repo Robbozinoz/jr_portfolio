@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset=utf-8>
+    <title>''</title>
+    <meta name='description' content=''>
+    <meta name='author' content=''>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta http-equiv="Content-Security-Policy" content="default-src *;
+    img-src * 'self' data: https: http:;
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
+    style-src  'self' 'unsafe-inline' *">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css'>
+    <link href='https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap' rel='stylesheet'>
+    <style>
+        body {
+            margin: 1em auto;
+            max-width: 60em;
+            width: 88%;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h2 {
+            text-transform: capitalize;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div id="app">Checking your weather for you</div>
+    </div>
+
+    <script>
+        //Seperated for Environment variables
+        var settings = {
+            location: "https://ipapi.co/json",
+            weather: {
+                endpoint: "https://api.weatherbit.io/v2.0/current?city=",
+                apiKey: "5b86cd423292416aa8c3c4914f576140"
+            }
+        };
+
+        /**
+         * Sanitize and encode all HTML in a user-submitted string
+         * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
+         * @param   {String} str  The user-submitted string
+         * @returns {String}      The sanitized string
+         */
+        function sanitizeHTML(str) {
+            var temp = document.createElement("div");
+            temp.textContent = str;
+            temp.setAttribute('class', 'box');
+            return temp.innerHTML;
+        }
+
+        //Convert the temperature
+        var convertTemp = function (temp, country) {
+            return country === "US" ? Math.round((temp * 9) / 5 + 32) : temp;
+        }
+
+
+        //Fetch the location for ipape and send to WeatherBit for weather report
+        var getWeather = function () {
+            //Declare the location property to be base from first API call to second
+            var locationCity;
+            var locationCountry;
+
+            // Call the API for the location
+            fetch(settings.location).then(function (response) {
+
+                return response.ok ? response.json() : Promise.reject(response);
+
+            }).then(function (data) {
+                // Store the post data to a variable
+                locationCity = data.city;
+                locationCountry = data.country;
+                locationPost = data.postal
+
+                // Fetch the weatehr for the location using a second API call
+                return fetch(
+                    settings.weather.endpoint + locationCity + '&country=' +
+                    locationCountry +
+                    '&key=' + settings.weather.apiKey
+                );
+
+            }).then(function (response) {
+
+                return response.ok ? response.json() : Promise.reject(response);
+
+            }).then(function (weatherData) {
+                console.log(weatherData.data[0]);
+
+                allocateData(weatherData.data[0]);
+            }).catch(function (error) {
+                console.warn(error);
+            });
+
+        }
+
+        var allocateData = function (weatherData) {
+
+            //Allocate data objects to new variable for processing before render
+            city = weatherData.city_name;
+            country = weatherData.country_code;
+            temp = convertTemp(weatherData.app_temp, country);
+            sunrise = weatherData.sunrise;
+            sunset = weatherData.sunset;
+            time = weatherData.ob_time;
+            windDir = weatherData.wind_dir;
+            windSpd = weatherData.wind_spd;
+            icon = weatherData.weather.icon;
+
+            //Render the weather report results
+            render();
+        }
+
+        //Variable for the array of weatehr results
+        var render = function (weatherData) {
+            //Map array of stories to Article element
+            //Joined to a single array
+            app.innerHTML =
+                '<h1 class="content">Weather Report for ' + city + '</h1>' +
+                '<div class="content">' +
+                "<img src='https://www.weatherbit.io/static/img/icons/" + icon + ".png' alt='weather icon'>" +
+                '<section class="box">' +
+                '<h2>The temperature is:</h2>' +
+                sanitizeHTML(temp) +
+                'C</section>' +
+                '<section class="box">' +
+                '<h3>In: </h3>' +
+                sanitizeHTML(city) + ', ' +
+                sanitizeHTML(country) +
+                '</section>' +
+                '<section class="box">' +
+                '<section class="row is-full">' +
+                '<h3>The time is: </h3>' +
+                sanitizeHTML(time) +
+                '<h3>With sunset at:  </h3>' +
+                sanitizeHTML(sunset) +
+                ' hrs<h3>and sunrise at:  </h3>' +
+                sanitizeHTML(sunrise) +
+                ' hrs</section>' +
+                '</section>' +
+                '<section class="box">' +
+                '<h3>Wind Speed is:  </h3>' +
+                sanitizeHTML(windSpd) +
+                ' mph</section>' +
+                '</div>'
+        }
+
+        //Initiate the getWeather
+        getWeather();
+    </script>
+    <script src='https://polyfill.io/v3/polyfill.min.js'></script>
+</body>
+
+</html>

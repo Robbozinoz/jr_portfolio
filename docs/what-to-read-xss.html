@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NYT Top Stories</title>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css'>
+	<style>
+		body {
+			margin: 1em auto;
+			width: 75%;
+			display: flex;
+			flex-direction: column;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		h2 {
+			text-transform: capitalize;
+			font-size: 24px;
+			font-weight: bold;
+			padding: 7px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="app">
+		<!--Place articles inside here-->
+	</div>
+	<!-- <div class="container">
+		<button id="getButton">
+			Get Quotes
+		</button>
+	</div> -->
+	<script>
+		//Declare button variable
+		//var btn = document.querySelector('#getButton');
+
+		//Declare Top Stories variable
+		var stories = document.querySelector('#app');
+
+		//The API key
+		var apiKey = 'fyxIGmfhOMkSkE5TdtRCQbAObeu3rjXo';
+
+		//Set the sections to be retrieved from the API
+		var sections = ['arts', 'movies', 'sports', 'travel', 'world'];
+
+		//Sert the number of articles from each section
+		var articleNumber = 5;
+
+		/**
+		 * Sanitize and encode all HTML in a user-submitted string
+		 * @param  {String} str  The user-submitted string
+		 * @return {String} str  The sanitized string
+		 */
+		var sanitizeHTML = function (str) {
+			var temp = document.createElement('div');
+			temp.textContent = str;
+			return temp.innerHTML;
+		};
+
+		/**
+		 * Render articles into the DOM
+		 * @param  {Array} topStories The articles to render
+		 */
+		//Variable for the array of stories
+		var storyArray = function (topStories, section) {
+			//Map array of stories to Article element
+			//Joined to a single array
+			stories.innerHTML += '<h2>' + sanitizeHTML(section) + '</h2>' + topStories.map(function (article) {
+				var html =
+					'<article class="box">' +
+					'<h2><a class="button is-link is-light" href="' + sanitizeHTML(article.url) + '">' +
+					sanitizeHTML(article.title) +
+					'</a></h2>' +
+					'<p class="content">' + sanitizeHTML(article.byline) + '</p>' +
+					'<p class="content">' + sanitizeHTML(article.abstract) + '</p>' +
+					'</article>';
+				return html;
+			}).join('');
+		};
+
+		/**
+		 * Get articles for a section
+		 * @param   {String} section The section name
+		 * @return  {Array} storyArray The rendering of the stories
+		 */
+		//Function to fetch then map then place inner html & catch errors
+		var getStories = function (section) {
+			//Fetch the NYT top stories from the API
+			fetch('https://api.nytimes.com/svc/topstories/v2/' + section + '.json?api-key=' + apiKey).then(function (
+				response) {
+				//Check the response and also provide error response
+				return response.ok ? response.json() : Promise.reject(response);
+			}).then(function (data) {
+				// Get the number of articles chosen
+				var articleQuota = getarticleQuota(data.results);
+
+				//Place data in the array Array
+				storyArray(articleQuota, section);
+
+			}).catch(function (error) {
+				//create Catch for response error
+				stories.textContent = '[Something went wrong, sorry!].', error;
+			});
+		}
+
+		/**
+		 * Get the chosen number of articles from the full data set
+		 * @param  {Array} articles The full set of articles
+		 * @return {Array}          The chosen amount of articles in articleNumber
+		 */
+		var getarticleQuota = function (articles) {
+			return articles.slice(0, articleNumber);
+		};
+
+		/**
+		 * Get the section for the articles and send to teh API call function
+		 * @param  {Array} sections The section chosen
+		 */
+		sections.forEach(function (section) {
+			getStories(section);
+		});
+
+		// //Create event listener to initiate api call
+		// btn.addEventListener('click', getSection, false)
+	</script>
+	<script
+		src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.map%2Cdefault%2CMap%2CPromise%2Cfetch%2CArray.prototype.indexOf">
+	</script>
+</body>
+
+</html>

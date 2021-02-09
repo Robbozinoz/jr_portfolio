@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto|Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous" />
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="form.js"></script>
+  <!--<link rel="stylesheet" href="form.css" />-->
+  <link rel="stylesheet" href="../css/main.css" />
+  <title>Contact</title>
+</head>
+
+<body>
+  <header>
+    <div class="menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+
+    <nav class="menu">
+      <div class="menu-branding">
+        <div class="portrait"></div>
+      </div>
+      <ul class="menu-nav">
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link"> Home </a>
+        </li>
+        <li class="nav-item">
+          <a href="../about.html" class="nav-link"> About Me </a>
+        </li>
+        <li class="nav-item">
+          <a href="../work.html" class="nav-link"> My Work </a>
+        </li>
+        <li class="nav-item current">
+          <a href="contact.html" class="nav-link"> Contact Me </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contact">
+    <h1 class="lg-heading">Contact <span class="text-secondary">Me</span></h1>
+    <!--<h2 class="sm-heading">Here is how to Reach Me</h2>-->
+    <h2>If you are a company, individual or project team</h>
+      <div class="boxes contact-box">
+        <div>
+          <img src="../img/jr_bgdsm.jpg" class="contact-image" alt="John Robertson" />
+        </div>
+      </div>
+
+      <!--New contact form-->
+      <div class="container-form">
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        <div class="form-container">
+          <form method="post" id="reused_form">
+            <label for="name">Your Name:</label>
+            <input id="name" type="text" name="Name" required maxlength="50">
+            <label for="email">Email Address:</label>
+            <input id="email" type="email" name="Email" required maxlength="50">
+            <label for="message">Message:</label>
+            <textarea id="message" name="Message" rows="10" maxlength="6000"
+              placeholder="Let me know a little about your request:" required></textarea>
+            <div class="g-recaptcha" data-sitekey="6LfU77UUAAAAAHv1HQaSP9T11B1Ubz5qlcod-YeK">
+            </div>
+            <button class="btn-dark" type="submit">Send</button>
+          </form>
+          <div id="success_message" style="display:none">
+            <p>Thanks for contacting me</p>
+            <p>I'll get right back to you!</p>
+          </div>
+          <div id="error_message" style="width:100%; height:100%; display:none; ">
+            <h3>Error</h3> Sorry there was an error sending your form.
+          </div>
+        </div>
+      </div>
+      <!--End of new form-->
+
+
+      <div class="boxes">
+        <!--<div>
+          <i class="far fa-envelope fa-2x"></i>
+          <span class="text-secondary">Email:</span>
+          <a class="text-secondary"
+            href="mailto:john@myjamjar.com.au?subject=Request%20for%20Web%20Developer%20Services">john@myjamjar.com.au</a>
+        </div>-->
+      </div>
+
+      <div class=" boxes">
+        <div>
+          <i class=" fab fa-linkedin fa-2x"></i>
+          <span class="text-secondary">LinkedIn:</span>
+          <a class="text-secondary" href="https://www.linkedin.com/in/jrobertson1" target="_blank">jrobertson1</a>
+        </div>
+        <div>
+          <i class=" fab fa-github
+          fa-2x"></i>
+          <span class="text-secondary">Github:</span>
+          <a class="text-secondary" href="https://github.com/Robbozinoz" target="_blank">Robbozinoz</a>
+        </div>
+        <!--<div>
+            <i class="fas fa-phone-volume fa-2x"></i>
+            <span class="text-secondary">Phone:</span>
+            <a class="text-secondary"">+61 8 92956613</a>
+        </div>-->
+      </div>
+  </main>
+
+  <footer id="main-footer">
+    <div class="footer-icons">
+
+      <a href="https://www.linkedin.com/in/jrobertson1/" target="_blank"> <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      <a href="https://github.com/Robbozinoz" target="_blank"> <i class="fab fa-github fa-2x"></i> </a>
+    </div>
+    <div>Copyright&copy; Room 5 Web Development 2019</div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <!--<script src="form.js"></script>-->
+</body>
+
+</html>
