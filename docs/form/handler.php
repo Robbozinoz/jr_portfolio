@@ -20,9 +20,16 @@ $validator->field('Message')->maxLength(6000);
 
 
 $pp->requireReCaptcha();
+<<<<<<< HEAD
 $pp->getReCaptcha()->initSecretKey('6LfU77UUAAAAAOJucuvtCicypGEe8TbqB_2zlPQl');
 
 
 $pp->sendEmailTo('john@myjamjar.com.au'); // ← Your email here
+=======
+$pp->getReCaptcha()->initSecretKey('XXXXX');
+
+
+$pp->sendEmailTo('john@room5.net.au'); // ← Your email here
+>>>>>>> f18e3b0a36e4319b1326929c6e2669603a314977
 
 echo $pp->process($_POST);

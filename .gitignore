@@ -2,4 +2,9 @@ node_modules
 package.json
 *.psd
 /js/es6class.js
+<<<<<<< HEAD
 /img/archive/
+=======
+/img/archive/
+/doc/form/handler.php
+>>>>>>> f18e3b0a36e4319b1326929c6e2669603a314977
