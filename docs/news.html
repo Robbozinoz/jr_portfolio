@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NYT Top Stories</title>
@@ -10,6 +11,15 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css'>
     <link rel="stylesheet" href="css/main.css" />
     <style>
+=======
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NYT Top Stories</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"> 
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css'>
+	<style>
+>>>>>>> b1141b54ebf917f8cbf7630e03cc4bcc4c1835b2
         article {
             background: #f2f5ff;
             margin-bottom: 14px;
@@ -25,25 +35,41 @@
             height: 2em;
             font-size: 1.25em;
         }
+<<<<<<< HEAD
 
         .news-heading {
             /* font-weight: 800; */
             text-transform: capitalize;
             font-size: 2em;
         }
+=======
+>>>>>>> b1141b54ebf917f8cbf7630e03cc4bcc4c1835b2
     </style>
 </head>
 
 <body class="container">
+<<<<<<< HEAD
     <main class="main-header">
         <h1 class="lg-heading">Latest News</h1>
+=======
+    <main>
+        <h1>Latest News</h1>
+>>>>>>> b1141b54ebf917f8cbf7630e03cc4bcc4c1835b2
         <div id="app">
             <!--Place articles inside here-->
             <!--Possible loading quote-->
         </div>
+<<<<<<< HEAD
         <button class="btn-dark" id="getButton">
             Get the Latest
         </button>
+=======
+
+        <button class="btn-dark" id="getButton">
+            Get the Latest
+        </button>
+
+>>>>>>> b1141b54ebf917f8cbf7630e03cc4bcc4c1835b2
     </main>
     <footer id="main-footer">
         <div class="footer-icons">
@@ -51,7 +77,11 @@
             </a>
             <a href="https://github.com/Robbozinoz" target="_blank"> <i class="fab fa-github fa-2x"></i> </a>
         </div>
+<<<<<<< HEAD
         <div>Copyright&copy; Room 5 Web Development 2021</div>
+=======
+        <div>Copyright&copy; Room 5 Web Development 2019</div>
+>>>>>>> b1141b54ebf917f8cbf7630e03cc4bcc4c1835b2
     </footer>
     <script>
         //Declare button variable
@@ -88,6 +118,7 @@
         var storyArray = function (topStories, section) {
             //Map array of stories to Article element
             //Joined to a single array
+<<<<<<< HEAD
             stories.innerHTML += '<h2 class="news-heading text-secondary">' + sanitizeHTML(section) + '</h2>' +
                 topStories.map(
                     function (article) {
@@ -102,6 +133,19 @@
                             '</article>';
                         return html;
                     }).join('');
+=======
+            stories.innerHTML += '<h2>' + sanitizeHTML(section) + '</h2>' + topStories.map(function (article) {
+                var html =
+                    '<article class="box">' +
+                    '<h2><a class="button is-link is-light" href="' + sanitizeHTML(article.url) + '">' +
+                    sanitizeHTML(article.title) +
+                    '</a></h2>' +
+                    '<p class="content">' + sanitizeHTML(article.byline) + '</p>' +
+                    '<p class="content">' + sanitizeHTML(article.abstract) + '</p>' +
+                    '</article>';
+                return html;
+            }).join('');
+>>>>>>> b1141b54ebf917f8cbf7630e03cc4bcc4c1835b2
         };
 
         /**

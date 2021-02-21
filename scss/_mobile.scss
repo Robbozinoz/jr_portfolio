@@ -10,10 +10,13 @@
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
+<<<<<<< HEAD
+=======
 
   .menu .nav-link {
     font-size: 1.75rem;
   }
+>>>>>>> f18e3b0a36e4319b1326929c6e2669603a314977
 }
 
 //Tablets & small Laptops
@@ -51,15 +54,22 @@
 
     .nav-link {
       padding: 0.3rem 0;
+<<<<<<< HEAD
+=======
       font-size: 1.7rem;
+>>>>>>> f18e3b0a36e4319b1326929c6e2669603a314977
     }
   }
 
   .menu-branding {
     height: 28vh;
     transform: translate3d(100%, 0, 0);
+<<<<<<< HEAD
+    background: url("../img/background-gear.jpg") no-repeat;
+=======
     //background: url("../img/background-gear.jpg") no-repeat;
     background: url("../img/room/room_menu_6.jpg") no-repeat;
+>>>>>>> f18e3b0a36e4319b1326929c6e2669603a314977
 
     .portrait {
       background: url("../img/jr_bdgsm.png");
@@ -94,8 +104,11 @@
     }*/
 
   main {
+<<<<<<< HEAD
+=======
     padding: 1.5rem;
 
+>>>>>>> f18e3b0a36e4319b1326929c6e2669603a314977
     #home h1 {
       margin-top: 10vh;
     }
@@ -120,15 +133,22 @@
   }
 
   .menu-branding {
+<<<<<<< HEAD
+    background: url("../img/background-gear_footer.jpg") no-repeat;
+=======
     //background: url("../img/background-gear_footer.jpg") no-repeat;
     background: url("../img/room/room_menu_6.jpg") no-repeat;
+>>>>>>> f18e3b0a36e4319b1326929c6e2669603a314977
   }
 
   .footer-icons {
     float: none;
   }
+<<<<<<< HEAD
+=======
 
   .menu .nav-link {
     font-size: 1.75rem;
   }
+>>>>>>> f18e3b0a36e4319b1326929c6e2669603a314977
 }

@@ -46,7 +46,11 @@
   width: 100%;
   opacity: 1;
   visibility: hidden;
+<<<<<<< HEAD
+  
+=======
 
+>>>>>>> f18e3b0a36e4319b1326929c6e2669603a314977
 
   &.show {
     visibility: visible;
@@ -78,11 +82,18 @@
     }
   }
 
+<<<<<<< HEAD
+  //BRanding
+  &-branding {
+    /*background: $primary-color;*/
+    background: url("../img/background-gear.jpg");
+=======
   //Branding
   &-branding {
     /*background: $primary-color;*/
     //background: url("../img/background-gear.jpg");
     background: url("../img/room/room_sml_bkg.jpg");
+>>>>>>> f18e3b0a36e4319b1326929c6e2669603a314977
     @include ease-out;
     transform: translate3d(0, 100%, 0);
 
@@ -133,7 +144,11 @@
 }
 
 //Delay each nav item slide by 0.1s
+<<<<<<< HEAD
+@for $x from 1 through 4 {
+=======
 @for $x from 1 through 5 {
+>>>>>>> f18e3b0a36e4319b1326929c6e2669603a314977
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;
   }
