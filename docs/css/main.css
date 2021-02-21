@@ -299,7 +299,7 @@ main {
   /*Replace with gears image background: darken($primary-color, 10);*/
   background: url(../img/background-gear_footer.jpg);
   color: #000;
-  /*height: 60px;*/ }
+  height: 60px; }
   #main-footer .footer-icons {
     float: right; }
     #main-footer .footer-icons a {

@@ -4,5 +4,7 @@
 			"path": "C:\\laragon\\www\\JAR\\jr_portfolio"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
 }
